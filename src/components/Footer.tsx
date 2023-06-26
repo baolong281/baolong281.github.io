@@ -28,8 +28,14 @@ const Footer: NextPage = () => {
   return (
     <>
       <div className="flex min-h-fit w-[80%] flex-wrap justify-center gap-1 overflow-hidden p-4 align-middle">
-        {images.map((link) => (
-          <Image src={link} alt="idk" height="31" width="88"></Image>
+        {images.map((link, index) => (
+          <Image
+            src={link}
+            key={index}
+            alt="idk"
+            height="31"
+            width="88"
+          ></Image>
         ))}
       </div>
     </>
