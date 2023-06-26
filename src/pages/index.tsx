@@ -6,10 +6,9 @@ export default function Home() {
   const [art, setArt] = useState("");
 
   useEffect(() => {
-    const getArt = async () => {
+    const getArt = async (): Promise<void> => {
       const response = await fetch("art.txt");
       const textContent = await response.text();
-      console.log(textContent);
       setArt(textContent);
     };
     getArt();
