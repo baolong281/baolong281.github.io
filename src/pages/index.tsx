@@ -11,7 +11,7 @@ export default function Home() {
       const textContent = await response.text();
       setArt(textContent);
     };
-    getArt();
+    void getArt();
   });
 
   return (
