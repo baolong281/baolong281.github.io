@@ -37,12 +37,12 @@ export default function Home() {
         <div className="flex justify-center align-middle">
           <div className="flex justify-center gap-2 p-2 align-middle font-opensans md:w-[65%] md:gap-6">
             <div className="flex justify-center align-middle text-xl font-semibold md:text-4xl">
-              Hi!{"\n"}Im Dylan.
+              {"Hi!\nIm Dylan."}
             </div>
             <div className="flex justify-center align-middle text-base md:text-2xl">
-              I'm a student at The University of Texas at Austin studying Data
-              Science and Mathematics. I'm interested in math, deep learning,
-              computer vision, and system architecture.
+              {
+                "I'm a student at The University of Texas at Austin studying Data Science and Mathematics. I'm interested in math, deep learning, computer vision, and system architecture."
+              }
             </div>
           </div>
         </div>
