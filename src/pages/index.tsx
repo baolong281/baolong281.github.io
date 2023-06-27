@@ -4,12 +4,16 @@ import Footer from "~/components/Footer";
 
 export default function Home() {
   const [art, setArt] = useState("");
+  const [altArt, setAltArt] = useState("");
 
   useEffect(() => {
     const getArt = async (): Promise<void> => {
       const response = await fetch("art.txt");
       const textContent = await response.text();
       setArt(textContent);
+      const response2 = await fetch("butterfly.txt");
+      const butterflyContent = await response2.text();
+      setAltArt(butterflyContent);
     };
     void getArt();
   });
@@ -17,9 +21,14 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col justify-center gap-2 p-2 align-middle md:gap-7 md:p-4 ">
-        <pre className="flex justify-center align-middle text-[10px] font-extrabold text-green-600 md:text-sm">
-          {art}
-        </pre>
+        <div className="flex justify-center gap-4 align-middle">
+          <pre className="flex justify-center align-middle text-[6px] font-extrabold text-green-600 hover:text-fuchsia-400 md:text-sm">
+            {art}
+          </pre>
+          <pre className="flex justify-center align-middle text-[5px] text-green-600 hover:text-orange-700 md:text-[10px]">
+            {altArt}
+          </pre>
+        </div>
         <div className="flex justify-center gap-6 align-middle font-lato text-3xl font-bold text-blue-700 md:text-5xl">
           <Link href="./" className="hover:text-red-600">
             me
