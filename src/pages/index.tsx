@@ -21,11 +21,11 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col justify-center gap-2 p-2 align-middle md:gap-7 md:p-4 ">
-        <div className="flex justify-center gap-4 align-middle">
+        <div className="flex justify-center gap-4 align-middle md:gap-12">
           <pre className="flex justify-center align-middle text-[6px] font-extrabold text-green-600 hover:text-fuchsia-400 md:text-sm">
             {art}
           </pre>
-          <pre className="flex justify-center align-middle text-[5px] text-green-600 hover:text-orange-700 md:text-[10px]">
+          <pre className="flex justify-center align-middle text-[5px] text-green-600 hover:text-orange-700 md:mt-6 md:text-[9px]">
             {altArt}
           </pre>
         </div>
