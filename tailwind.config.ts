@@ -7,6 +7,8 @@ export default {
       fontFamily: {
         lato: ["Lato", "sans-serif"],
         opensans: ["Open Sans", "sans-serif"],
+        martian: ["Martian Mono", "monospace"],
+        figtree: ["Figtree", "sans-serif"],
       },
     },
   },

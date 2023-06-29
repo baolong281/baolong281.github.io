@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Block, { BlockSection, Post } from "~/components/Block";
 import Footer from "~/components/Footer";
 
 export default function Home() {
@@ -18,10 +19,26 @@ export default function Home() {
     void getArt();
   });
 
+  const post: Post = {
+    title: "img2math",
+    description: "chrome extension for converting images into TeX code",
+    links: [
+      {
+        sourceLink: "https://github.com/baolong281/img2math",
+        linkTitle: "github",
+      },
+    ],
+  };
+
+  const blockSection: BlockSection = {
+    posts: [post],
+    sectionTitle: "deep learning",
+  };
+
   return (
     <>
-      <div className="flex flex-col justify-center gap-2 p-2 align-middle md:gap-7 md:p-4 ">
-        <div className="flex justify-center gap-4 align-middle md:gap-12">
+      <div className="flex flex-col justify-center gap-2 p-2 align-middle md:gap-4 md:p-4">
+        <div className="mb-2 flex justify-center gap-4 align-middle md:gap-12">
           <pre className="flex justify-center align-middle text-[6px] font-extrabold text-green-600 hover:text-fuchsia-400 md:text-sm">
             {art}
           </pre>
@@ -29,7 +46,7 @@ export default function Home() {
             {altArt}
           </pre>
         </div>
-        <div className="flex justify-center gap-6 align-middle font-lato text-3xl font-bold text-blue-700 md:text-5xl">
+        <div className="flex justify-center gap-7 align-middle font-lato text-3xl font-bold text-blue-700 md:text-5xl">
           <Link href="./" className="hover:text-red-600">
             me
           </Link>
@@ -44,8 +61,8 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex justify-center align-middle">
-          <div className="flex justify-center gap-2 p-2 align-middle font-opensans md:w-[65%] md:gap-6">
-            <div className="flex justify-center align-middle text-xl font-semibold md:text-4xl">
+          <div className="flex justify-center gap-4 p-2 align-middle font-figtree md:w-[60%] md:gap-8">
+            <div className="mt-6 flex justify-center align-middle text-xl font-semibold md:mt-4 md:text-4xl">
               {"Hi!\nIm Dylan."}
             </div>
             <div className="flex justify-center align-middle text-base md:text-2xl">
@@ -54,6 +71,9 @@ export default function Home() {
               }
             </div>
           </div>
+        </div>
+        <div className="md:mt-18 mt-6 flex flex-col justify-center align-middle">
+          <Block sections={[blockSection]} blockTitle={"works"} />
         </div>
         <div className="flex justify-center align-middle">
           <Footer></Footer>
