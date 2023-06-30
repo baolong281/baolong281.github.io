@@ -39,10 +39,10 @@ export default function Home() {
     <>
       <div className="flex flex-col justify-center gap-2 p-2 align-middle md:gap-4 md:p-4">
         <div className="mb-2 flex justify-center gap-4 align-middle md:gap-12">
-          <pre className="flex justify-center align-middle text-[6px] font-extrabold text-green-600 hover:text-fuchsia-400 md:text-sm">
+          <pre className="flex justify-center align-middle text-[6px] font-extrabold text-green-600 hover:text-fuchsia-400 md:text-lg">
             {art}
           </pre>
-          <pre className="flex justify-center align-middle text-[5px] text-green-600 hover:text-orange-700 md:mt-6 md:text-[9px]">
+          <pre className="flex justify-center align-middle text-[5px] text-green-600 hover:text-orange-700 md:mt-6 md:text-[11px]">
             {altArt}
           </pre>
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center align-middle">
           <div className="flex justify-center gap-4 p-2 align-middle font-figtree md:w-[60%] md:gap-8">
-            <div className="mt-6 flex justify-center align-middle text-xl font-semibold md:mt-4 md:text-4xl">
+            <div className="flex justify-center align-middle text-xl font-semibold md:text-4xl">
               {"Hi!\nIm Dylan."}
             </div>
             <div className="flex justify-center align-middle text-base md:text-2xl">
