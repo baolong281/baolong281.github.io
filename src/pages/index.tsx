@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Block, { BlockSection, Post } from "~/components/Block";
+import Block from "~/components/Block";
 import Footer from "~/components/Footer";
+import { getWorks } from "~/utils/getPosts";
 
 export default function Home() {
   const [art, setArt] = useState("");
@@ -19,21 +20,7 @@ export default function Home() {
     void getArt();
   });
 
-  const post: Post = {
-    title: "img2math",
-    description: "chrome extension for converting images into TeX code",
-    links: [
-      {
-        sourceLink: "https://github.com/baolong281/img2math",
-        linkTitle: "github",
-      },
-    ],
-  };
-
-  const blockSection: BlockSection = {
-    posts: [post],
-    sectionTitle: "deep learning",
-  };
+  const worksSection = getWorks();
 
   return (
     <>
@@ -73,7 +60,7 @@ export default function Home() {
           </div>
         </div>
         <div className="md:mt-18 mt-6 flex flex-col justify-center align-middle">
-          <Block sections={[blockSection]} blockTitle={"works"} />
+          <Block sections={worksSection} blockTitle={"works"} />
         </div>
         <div className="flex justify-center align-middle">
           <Footer></Footer>
