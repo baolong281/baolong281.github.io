@@ -55,20 +55,22 @@ const Block: NextPage<BlockProps> = ({ sections, blockTitle }) => {
                         {post.description}
                       </div>
                     </div>
-                    <div className="ml-20 mt-2 flex justify-start gap-3 align-top font-figtree text-lg font-normal md:ml-72">
-                      {post.links.map((link, index) => {
-                        return (
-                          <div key={index} className="flex ">
-                            {`[${index}] `}
-                            <a
-                              href={link.sourceLink}
-                              className="italic text-blue-700"
-                            >
-                              {link.linkTitle}
-                            </a>
-                          </div>
-                        );
-                      })}
+                    <div className="mt-2 flex justify-center gap-3 align-middle font-figtree text-lg font-normal">
+                      <div className="flex w-[55%] gap-2">
+                        {post.links.map((link, index) => {
+                          return (
+                            <div key={index} className="flex">
+                              {`[${index}]`}{" "}
+                              <a
+                                href={link.sourceLink}
+                                className="italic text-blue-700"
+                              >
+                                {link.linkTitle}
+                              </a>
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 );
