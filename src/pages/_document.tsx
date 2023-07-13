@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="shotcut icon" type="image/x-icon" href="favicon.ico?" />
+        <title>dylan h.</title>
       </Head>
       <body>
         <Main />

@@ -24,7 +24,7 @@ export interface Post {
 const Block: NextPage<BlockProps> = ({ sections, blockTitle }) => {
   return (
     <>
-      <div className="flex flex-col justify-center gap-4 align-middle">
+      <div className="flex flex-col justify-center gap-6 align-middle">
         <div className="flex justify-center align-middle font-lato text-3xl font-bold md:text-4xl">
           {blockTitle}
         </div>
@@ -35,7 +35,7 @@ const Block: NextPage<BlockProps> = ({ sections, blockTitle }) => {
               className="font-figree flex flex-col justify-center gap-4 align-middle font-semibold"
             >
               <div className="font-base flex justify-center align-middle font-figtree text-base md:text-3xl">
-                <div className="w-[55%] break-all">
+                <div className="w-[55%] break-all ">
                   {"* * * " + section.sectionTitle + " *".repeat(80)}
                 </div>
               </div>
@@ -52,16 +52,14 @@ const Block: NextPage<BlockProps> = ({ sections, blockTitle }) => {
                     </div>
                     <div className="mt-4 flex justify-center align-middle text-xl">
                       <div className="md: w-[55%] font-figtree font-normal">
-                        blah blahblah blahblah blahblah blahblah blahblah
-                        blahblah blahblah blahblah blahblah blahblah blahblah
-                        blahblah blah
+                        {post.description}
                       </div>
                     </div>
-                    <div className="mt-2 flex justify-center align-middle font-figtree text-lg font-normal ">
+                    <div className="ml-20 mt-2 flex justify-start gap-3 align-top font-figtree text-lg font-normal md:ml-72">
                       {post.links.map((link, index) => {
                         return (
-                          <div key={index} className="w-[55%]">
-                            {`[${index}] `}{" "}
+                          <div key={index} className="flex ">
+                            {`[${index}] `}
                             <a
                               href={link.sourceLink}
                               className="italic text-blue-700"
