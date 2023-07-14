@@ -33,7 +33,7 @@ export const getWorks = (): BlockSection[] => {
   const food_glitch = {
     title: "infinite-food-glitch",
     description:
-      "A bot that scraped twitter data for free Chipotle codes during their NBA promotion. Got lots of free burritos.",
+      "A bot that scraped twitter data for free Chipotle codes during their NBA promotion.",
     links: [
       {
         sourceLink: "https://github.com/baolong281/infinite-food-glitch",
