@@ -30,6 +30,17 @@ export const getWorks = (): BlockSection[] => {
     ],
   };
 
+  const rustslam = {
+    title: "rustslam",
+    description: "implementation of monacular orb-slam written in rust. WIP",
+    links: [
+      {
+        sourceLink: "https://github.com/baolong281/rustslam",
+        linkTitle: "github",
+      },
+    ],
+  };
+
   const food_glitch = {
     title: "infinite-food-glitch",
     description:
@@ -48,7 +59,7 @@ export const getWorks = (): BlockSection[] => {
       sectionTitle: "deep learning",
     },
     {
-      posts: [food_glitch],
+      posts: [rustslam, food_glitch],
       sectionTitle: "miscellaneous",
     },
   ];
