@@ -20,6 +20,18 @@ export default function Home() {
     void getArt();
   });
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*#/, "");
+    const elem = document.getElementById(targetId);
+
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const worksSection = getWorks();
 
   return (
@@ -34,16 +46,29 @@ export default function Home() {
           </pre>
         </div>
         <div className="flex justify-center gap-7 align-middle font-lato text-3xl font-bold text-blue-700 md:text-5xl">
-          <Link href="./" className="hover:text-red-600">
+          <Link
+            href="#me"
+            onClick={handleScroll}
+            className="hover:text-red-600"
+            id="me"
+          >
             me
           </Link>
-          <Link href="./" className="hover:text-red-600">
+          <Link
+            href="#works"
+            onClick={handleScroll}
+            className="hover:text-red-600"
+          >
             works
           </Link>
           <Link href="./" className="hover:text-red-600">
             fun
           </Link>
-          <Link href="./" className="hover:text-red-600">
+          <Link
+            href="#contact"
+            className="hover:text-red-600"
+            onClick={handleScroll}
+          >
             contact
           </Link>
         </div>
@@ -52,15 +77,50 @@ export default function Home() {
             <div className="flex justify-center align-middle text-xl font-semibold md:text-4xl">
               {"Hi!\nIm Dylan."}
             </div>
-            <div className="flex justify-center align-middle text-base md:text-2xl">
+            <div className="text-bafse flex justify-center align-middle md:text-2xl">
               {
                 "I'm a student at The University of Texas at Austin studying Data Science and Mathematics. I'm interested in math, deep learning, computer vision, and system architecture."
               }
             </div>
           </div>
         </div>
-        <div className="md:mt-18 mt-6 flex flex-col justify-center align-middle">
+        <div
+          className="md:mt-18 mt-6 flex flex-col justify-center align-middle"
+          id="works"
+        >
           <Block sections={worksSection} blockTitle={"works"} />
+        </div>
+        <div className="flex justify-center align-middle" id="contact">
+          <div className="mt-2 flex flex-col justify-center p-2 align-middle font-figtree md:w-[60%] md:gap-2">
+            <div className="flex justify-center align-middle text-xl font-semibold md:text-4xl">
+              {"contact"}
+            </div>
+
+            <div className="flex flex-col text-base md:text-2xl">
+              <Link
+                href="https://github.com/baolong281"
+                className="flex justify-center align-middle font-lato font-bold text-blue-700 hover:text-red-600"
+              >
+                github
+              </Link>
+            </div>
+            <div className="flex flex-col text-base md:text-2xl">
+              <Link
+                href="mailto:dylanhuyn@gmail.com"
+                className="flex justify-center align-middle font-lato font-bold text-blue-700 hover:text-red-600"
+              >
+                email
+              </Link>
+            </div>
+            <div className="flex flex-col text-base md:text-2xl">
+              <Link
+                href="https://open.spotify.com/user/jcm6ov1y4ttqdnvmaxr4yv69u"
+                className="flex justify-center align-middle font-lato font-bold text-blue-700 hover:text-red-600"
+              >
+                spotify
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="flex justify-center align-middle">
           <Footer></Footer>
