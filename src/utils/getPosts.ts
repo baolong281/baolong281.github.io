@@ -1,11 +1,10 @@
-import { BlockSection } from "~/components/Block";
+import { type BlockSection } from "~/components/Block";
 
 export const getWorks = (): BlockSection[] => {
   const img2math = {
     title: "img2math",
     description:
-      "Sometimes I'm reading a paper and I see a giant, unexplainable equation that I can't copy but need to search up.\
-    The solution? A chrome extension that turns images into TeX equations. WIP",
+      "Deep learning powered chrome extension that converts images into LaTeX equations. WIP.",
     links: [
       {
         sourceLink: "https://github.com/baolong281/img2math",
@@ -17,7 +16,7 @@ export const getWorks = (): BlockSection[] => {
   const goobergrad = {
     title: "goobergrad",
     description:
-      "An autograd engine written from scratch in numpy. Based on the micrograd videos by Andrej Karpathy.",
+      "Autograd engine written in numpy. Based on the micrograd videos by Andrej Karpathy.",
     links: [
       {
         sourceLink: "https://github.com/baolong281/goobergrad.git",
@@ -32,7 +31,7 @@ export const getWorks = (): BlockSection[] => {
 
   const rustslam = {
     title: "rustslam",
-    description: "implementation of monacular orb-slam written in rust. WIP",
+    description: "An implementation of monacular orb-slam written in rust. WIP",
     links: [
       {
         sourceLink: "https://github.com/baolong281/rustslam",
@@ -59,7 +58,7 @@ export const getWorks = (): BlockSection[] => {
       sectionTitle: "deep learning",
     },
     {
-      posts: [rustslam, food_glitch],
+      posts: [food_glitch, rustslam],
       sectionTitle: "miscellaneous",
     },
   ];
