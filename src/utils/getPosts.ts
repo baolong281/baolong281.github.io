@@ -14,12 +14,12 @@ export const getWorks = (): BlockSection[] => {
   };
 
   const goobergrad = {
-    title: "goobergrad",
+    title: "sillygrad",
     description:
-      "Autograd engine written in numpy. Based on the micrograd videos by Andrej Karpathy.",
+      "Autograd engine written in C++ and accelerated with CUDA.",
     links: [
       {
-        sourceLink: "https://github.com/baolong281/goobergrad.git",
+        sourceLink: "https://github.com/baolong281/sillygrad",
         linkTitle: " github",
       },
       {
