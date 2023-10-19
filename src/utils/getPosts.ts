@@ -66,7 +66,7 @@ export const getWorks = (): BlockSection[] => {
 
   return [
     {
-      posts: [img2math, goobergrad, coverizer],
+      posts: [img2math,coverizer, goobergrad],
       sectionTitle: "deep learning",
     },
     {
