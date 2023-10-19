@@ -13,6 +13,18 @@ export const getWorks = (): BlockSection[] => {
     ],
   };
 
+  const coverizer = {
+    title: "coverizer2",
+    description:
+      "A web app that converts album covers into wallpapers using Stable Diffusion.",
+    links: [
+      {
+        sourceLink: "https://github.com/baolong281/coverizer2",
+        linkTitle: " github",
+      },
+    ],
+  };
+
   const goobergrad = {
     title: "sillygrad",
     description:
@@ -54,7 +66,7 @@ export const getWorks = (): BlockSection[] => {
 
   return [
     {
-      posts: [img2math, goobergrad],
+      posts: [img2math, goobergrad, coverizer],
       sectionTitle: "deep learning",
     },
     {
