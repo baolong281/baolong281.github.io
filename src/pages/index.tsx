@@ -79,7 +79,7 @@ export default function Home() {
             </div>
             <div className="text-bafse flex justify-center align-middle md:text-2xl">
               {
-                "I'm a student at The University of Texas at Austin studying Data Science and Mathematics. I'm currently interested in math and deep learning."
+                "I'm a student at The University of Texas at Austin studying Data Science and Mathematics. I'm currently interested in math, distributed systems, and deep learning."
               }
             </div>
           </div>
