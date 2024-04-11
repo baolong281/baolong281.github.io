@@ -4,7 +4,7 @@ export const getWorks = (): BlockSection[] => {
   const img2math = {
     title: "img2math",
     description:
-      "Deep learning powered chrome extension that converts images into LaTeX equations. WIP.",
+      "Deep learning powered chrome extension that converts images into TeX equations, includes a < 50mb model trained by me. WIP.",
     links: [
       {
         sourceLink: "https://github.com/baolong281/img2math",
@@ -28,7 +28,7 @@ export const getWorks = (): BlockSection[] => {
   const goobergrad = {
     title: "sillygrad",
     description:
-      "Autograd engine written in C++ and accelerated with CUDA.",
+      "A small tensor library written in C++ and accelerated with CUDA.",
     links: [
       {
         sourceLink: "https://github.com/baolong281/sillygrad",
@@ -64,13 +64,29 @@ export const getWorks = (): BlockSection[] => {
     ],
   };
 
+  const hypatia = {
+    title: "hypatia.ai",
+    description:
+      "An AI powered note taking and flashcard generation app. Winner at HackTX23.",
+    links: [
+      {
+        sourceLink: "https://hypatia-zeta.vercel.app/",
+        linkTitle: "website",
+      },
+      {
+        sourceLink: "https://devpost.com/software/everest-ca8b9z",
+        linkTitle: "submission",
+      },
+    ],
+  };
+
   return [
     {
-      posts: [img2math,coverizer, goobergrad],
+      posts: [img2math, coverizer, goobergrad],
       sectionTitle: "deep learning",
     },
     {
-      posts: [food_glitch, rustslam],
+      posts: [hypatia, food_glitch, rustslam],
       sectionTitle: "miscellaneous",
     },
   ];
