@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Block from "~/components/Block";
@@ -61,9 +62,6 @@ export default function Home() {
           >
             works
           </Link>
-          <Link href="./" className="hover:text-red-600">
-            fun
-          </Link>
           <Link
             href="#contact"
             className="hover:text-red-600"
@@ -79,8 +77,10 @@ export default function Home() {
             </div>
             <div className="text-bafse flex justify-center align-middle md:text-2xl">
               {
-                "I'm a student at The University of Texas at Austin studying Data Science and Mathematics. I'm currently interested in math, distributed systems, and deep learning."
+                "I'm a student at The University of Texas at Austin studying Data Science and Mathematics. I'm currently interested in math, distributed systems, and deep learning 🙄. "
               }
+              <br />I also love art, music, photography, film and televison,
+              staying active, and especially making things!
             </div>
           </div>
         </div>
@@ -119,6 +119,15 @@ export default function Home() {
               >
                 spotify
               </Link>
+            </div>
+            <div className="mx-auto items-center md:text-xl">
+              website ****heavily**** inspired by{" "}
+              <a
+                href="https://aspenhopkins.com/"
+                className="text-blue-700 hover:text-red-600"
+              >
+                aspen hopkins
+              </a>
             </div>
           </div>
         </div>
