@@ -1,0 +1,99 @@
+/* Base styles */
+.stuff {
+  left: 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+pre {
+  font-size: 14px;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #d4d2cf, #ffffff);
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 2rem;
+  width: 40%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.icon-container img {
+  height: 31px;
+  width: 88px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 100% 50px;
+  }
+
+  .center {
+    width: 95%;
+    padding-top: 1rem;
+  }
+
+  .icon-container {
+    width: 100%;
+    gap: 0.3rem;
+  }
+
+  .icon-container img {
+    height: 25px;
+    width: 70px;
+  }
+
+  pre {
+    font-size: 18px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  pre {
+    font-size: 8px;
+  }
+
+  .icon-container img {
+    height: 20px;
+    width: 56px;
+  }
+}
