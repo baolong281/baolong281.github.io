@@ -1,10 +1,28 @@
 /* Base styles */
 .stuff {
   left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 span {
   font-weight: bold;
+}
+
+.song-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid 1px #000;
+  display: flex;
+  width: fit-content;
+  gap: 60px;
+}
+
+.song-container > img {
+  width: 100px;
+  height: 100px;
 }
 
 pre {
@@ -90,6 +108,21 @@ li {
 @media screen and (max-width: 480px) {
   pre {
     font-size: 8px;
+  }
+
+  .song-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid 1px #000;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .song-container > img {
+    width: 150px;
+    height: 150px;
   }
 
   .icon-container img {
