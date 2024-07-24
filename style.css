@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.section-header {
+  margin-block-end: 0.4rem;
+}
+
 span {
   font-weight: bold;
 }
