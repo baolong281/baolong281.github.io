@@ -19,6 +19,7 @@ span {
   display: flex;
   width: fit-content;
   gap: 60px;
+  aligin-items: center;
 }
 
 .song-container > img {
