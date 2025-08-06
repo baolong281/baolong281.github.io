@@ -1,15 +1,17 @@
 fetch("./beaver.txt")
   .then((response) => response.text())
   .then(
-    (text) => (document.getElementsByClassName("beaver")[0].textContent = text)
+    (text) => (document.getElementsByClassName("beaver")[0].textContent = text),
   );
 
-fetch("https://chronicles.lol/last-song").then((response) =>
+// please dont steal :)
+fetch(
+  "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=baolong281&api_key=eb034c1d7da87addd82c346f5897b726&format=json&limit=1",
+).then((response) => {
   response.json().then((data) => {
-    console.log(data);
-    artist = data.artist["#text"];
-    song = data.name;
-    img = data.image[2]["#text"];
+    artist = data.recenttracks.track[0].artist["#text"];
+    song = data.recenttracks.track[0].name;
+    img = data.recenttracks.track[0].image[2]["#text"];
 
     if (data["@attr"] && data["@attr"].nowplaying === "true") {
       document.getElementsByClassName("now-playing")[0].textContent =
@@ -19,5 +21,5 @@ fetch("https://chronicles.lol/last-song").then((response) =>
     document.getElementsByClassName("song-name")[0].textContent =
       `${song} by ${artist}`.toLowerCase();
     document.getElementsByClassName("song-img")[0].src = img;
-  })
-);
+  });
+});
